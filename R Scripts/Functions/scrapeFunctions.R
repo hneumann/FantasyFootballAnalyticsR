@@ -170,7 +170,7 @@ getNFLValues <- function(season){
 # Retrive Values from MFL
 getMFLValues <- function(year, type = "adp", league = NULL, week = NULL, ppr = FALSE){
   type <- ifelse(type == "nflSchedule", type, tolower(type))
-  mflUrl <- paste("http://football.myfantasyleague.com/", year, "/export?TYPE=", type, 
+  mflUrl <- paste("https://www70.myfantasyleague.com/", year, "/export?TYPE=", type, 
                   "&L=", league, "&W=", week, "&JSON=0", sep = "")
   if(type == c("adp")){
       mflUrl <- paste(mflUrl, "&IS_PPR=", as.numeric(ppr), "&IS_MOCK=0&DAYS=14", sep = "")
